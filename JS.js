@@ -11,35 +11,30 @@ window.onload = function () {
     const snakes = snake.getElementsByTagName("div");
     // 蛇头
     const snakeHead = snakes[0];
+    // 定义一个变量用来存储方向
+    let dir;
     document.addEventListener("keydown", event => {
+        // 设置方向
+        dir = event.key;
 
-        // evnet.key获取按下的按键
-        /* 
-            按下按键不松开会持续触发
-                但是第一次与第二次直接有间隔
-
-            贪吃蛇游戏蛇不能停
-        */
-        switch (event.key) {
+    })
+    // 每隔一段时间检查dir的值
+    setTimeout(function move() {
+        switch (dir) {
             case "ArrowUp":
                 snakeHead.style.top = snakeHead.offsetTop - 10 + "px";
-                console.log("上");
                 break;
             case "ArrowDown":
                 snakeHead.style.top = snakeHead.offsetTop + 10 + "px";
-                console.log("下");
                 break;
             case "ArrowLeft":
-                snakeHead.style.left = snakeHead.offsetLeft - 10 + "px";
-                console.log("左");
+                snakeHead.style.left = snakeHead.offsetLeft - 10 + "px";           
                 break;
             case "ArrowRight":
                 // 获取蛇当前的位置加上移动距离
                 snakeHead.style.left = snakeHead.offsetLeft + 10 + "px";
                 break;
         }
-
-
-
-    })
+        setTimeout(move,300)
+    }, 300)
 }
