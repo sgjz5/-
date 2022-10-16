@@ -31,6 +31,8 @@
   height: 10px;
   background-color: #000;
   position: absolute;
+  top: 120px;
+  left: 100px;
 }
 #snake > div {
   width: 10px;

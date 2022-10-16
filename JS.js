@@ -49,12 +49,17 @@ window.onload = function () {
         food.style.top = y + 'px';
         food.style.left = x + 'px';
     }
-    changeFood();
-
+    // 获取分数和level
+    const scoreText = document.querySelector("#score span");
+    const levelText = document.querySelector("#level span");
+    // 创建变量存储分数和等级
+    let score = 0;
+    let level = 1;
     /* 
         蛇的移动，最简单的方法。只改变最后一节身体的位置到目的地位置，蛇尾变成蛇头
     */
     // 每隔一段时间检查dir的值
+
     setTimeout(function move() {
         // 蛇头
         const snakeHead = snakes[0];
@@ -83,29 +88,33 @@ window.onload = function () {
             changeFood();
             // 增加蛇的身体
             snake.insertAdjacentHTML("beforeend", "<div></div>");
+            // 分数
+            score++;
+            scoreText.textContent = score;
+            // 升级等级
+            if (score % 10 == 0 && level < 14) {
+                level++;
+                levelText.textContent = level;
+            }
         };
         /* 
             添加游戏终止条件
                 1.撞到四面的墙
                 2.撞到自己
         */
-
         // 判断是否撞墙
         if (x < 0 || x > 290 || y < 0 || y > 290) {
             alert("游戏结束")
             // 游戏结束
             return
         };
-
         // 判断是否撞到自己，头尾撞没事
-        for (let i = 0; i < snakes.length-1; i++) {
+        for (let i = 0; i < snakes.length - 1; i++) {
             if (snakes[i].offsetLeft == x && snakes[i].offsetTop == y) {
                 alert("撞到自己，游戏结束");
                 return
             }
         }
-
-
         // 获取尾巴
         const tail = snakes[snakes.length - 1];
         // 移动蛇的位置
@@ -113,7 +122,7 @@ window.onload = function () {
         tail.style.top = y + "px";
         // 将尾巴移动到蛇头的位置(上面改变的是CSS样式，结构没变，所以需要改结构才能动)
         snake.insertAdjacentElement("afterbegin", tail);
-        setTimeout(move, 300);
+        setTimeout(move, 300 - level * 20);
         // 进入定时器说明按键事件结束，可以再按
         keyActive = true;
     }, 300);
