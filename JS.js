@@ -8,7 +8,6 @@ window.onload = function () {
     const snake = document.getElementById("snake");
     // 获取蛇的所有部位
     const snakes = snake.getElementsByTagName("div");
-
     /* 
         游戏禁止掉头
             1.身体超过2
@@ -16,10 +15,10 @@ window.onload = function () {
         处理
             保持原来的方向不变（不修改dir的值）
     */
-
-
     // 定义一个变量用来存储方向
     let dir;
+    // 保存按键状态
+    let keyActive = true;
     const keyArr = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
     // 创建一个对象
     const reObj = {
@@ -30,14 +29,15 @@ window.onload = function () {
     };
     document.addEventListener("keydown", event => {
         // 设置方向,判定按下的按键是正确的
-        if (keyArr.includes(event.key)) {
+        if (keyActive == true && keyArr.includes(event.key)) {
             // 身体大于2的时候，前一个方向与后一个方向不同就不能掉头
             if (snakes.length < 2 || reObj[dir] !== event.key) {
                 dir = event.key;
+                // 防止一次按两下导致掉头
+                keyActive = false;
             }
         }
     });
-
     const food = document.getElementById("food");
     // 食物的取值在（0-290），只能是10的倍数
     function changeFood() {
@@ -61,6 +61,7 @@ window.onload = function () {
         // 获取蛇头坐标
         let x = snakeHead.offsetLeft;
         let y = snakeHead.offsetTop;
+        // 实际移动的是蛇尾（只有一个的时候蛇头=蛇尾）
         switch (dir) {
             case "ArrowUp":
                 y -= 10;
@@ -83,6 +84,28 @@ window.onload = function () {
             // 增加蛇的身体
             snake.insertAdjacentHTML("beforeend", "<div></div>");
         };
+        /* 
+            添加游戏终止条件
+                1.撞到四面的墙
+                2.撞到自己
+        */
+
+        // 判断是否撞墙
+        if (x < 0 || x > 290 || y < 0 || y > 290) {
+            alert("游戏结束")
+            // 游戏结束
+            return
+        };
+
+        // 判断是否撞到自己，头尾撞没事
+        for (let i = 0; i < snakes.length-1; i++) {
+            if (snakes[i].offsetLeft == x && snakes[i].offsetTop == y) {
+                alert("撞到自己，游戏结束");
+                return
+            }
+        }
+
+
         // 获取尾巴
         const tail = snakes[snakes.length - 1];
         // 移动蛇的位置
@@ -90,7 +113,8 @@ window.onload = function () {
         tail.style.top = y + "px";
         // 将尾巴移动到蛇头的位置(上面改变的是CSS样式，结构没变，所以需要改结构才能动)
         snake.insertAdjacentElement("afterbegin", tail);
-
         setTimeout(move, 300);
+        // 进入定时器说明按键事件结束，可以再按
+        keyActive = true;
     }, 300);
 }
