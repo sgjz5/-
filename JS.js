@@ -45,6 +45,13 @@ window.onload = function () {
         // 0-30(包含0，不包含30，向下取整)
         const x = Math.floor(Math.random() * 30) * 10;
         const y = Math.floor(Math.random() * 30) * 10;
+
+        for (let i = 0; i < snakes.length; i++) {
+            while (x == snakes[i].offsetLeft && y == snakes[i].offsetTop) {
+                const x = Math.floor(Math.random() * 30) * 10;
+                const y = Math.floor(Math.random() * 30) * 10;
+            }
+        }
         // 设置食物的坐标
         food.style.top = y + 'px';
         food.style.left = x + 'px';
@@ -59,7 +66,6 @@ window.onload = function () {
         蛇的移动，最简单的方法。只改变最后一节身体的位置到目的地位置，蛇尾变成蛇头
     */
     // 每隔一段时间检查dir的值
-
     setTimeout(function move() {
         // 蛇头
         const snakeHead = snakes[0];
@@ -104,15 +110,22 @@ window.onload = function () {
         */
         // 判断是否撞墙
         if (x < 0 || x > 290 || y < 0 || y > 290) {
-            alert("游戏结束")
-            // 游戏结束
-            return
+            if (confirm(`游戏结束,分数为${score}`)) {
+                // 游戏结束
+                location.reload();
+            } else {
+                return;
+            }
         };
         // 判断是否撞到自己，头尾撞没事
         for (let i = 0; i < snakes.length - 1; i++) {
             if (snakes[i].offsetLeft == x && snakes[i].offsetTop == y) {
-                alert("撞到自己，游戏结束");
-                return
+                if (confirm(`游戏结束,分数为${score}`)) {
+                    location.reload();
+                } else {
+                    return;
+                }
+
             }
         }
         // 获取尾巴
