@@ -8,8 +8,7 @@ window.onload = function () {
     const snake = document.getElementById("snake");
     // 获取蛇的所有部位
     const snakes = snake.getElementsByTagName("div");
-    // 蛇头
-    const snakeHead = snakes[0];
+
     // 定义一个变量用来存储方向
     let dir;
     const keyArr = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]
@@ -33,21 +32,29 @@ window.onload = function () {
         console.log(x, y);
     }
     changeFood();
+
+    /* 
+        蛇的移动，最简单的方法。只改变最后一节身体的位置到目的地位置，蛇尾变成蛇头
+    */
     // 每隔一段时间检查dir的值
     setTimeout(function move() {
+        // 蛇头
+        const snakeHead = snakes[0];
+        // 获取蛇头坐标
+        let x = snakeHead.offsetLeft;
+        let y = snakeHead.offsetTop;
         switch (dir) {
             case "ArrowUp":
-                snakeHead.style.top = snakeHead.offsetTop - 10 + "px";
+                y -= 10;
                 break;
             case "ArrowDown":
-                snakeHead.style.top = snakeHead.offsetTop + 10 + "px";
+                y += 10;
                 break;
             case "ArrowLeft":
-                snakeHead.style.left = snakeHead.offsetLeft - 10 + "px";
+                x -= 10;
                 break;
             case "ArrowRight":
-                // 获取蛇当前的位置加上移动距离
-                snakeHead.style.left = snakeHead.offsetLeft + 10 + "px";
+                x += 10;
                 break;
         };
         // 获取食物,写外面只检测一次
@@ -56,8 +63,16 @@ window.onload = function () {
             // 改变食物的位置
             changeFood();
             // 增加蛇的身体
-            snake.insertAdjacentHTML("beforeend", "<div></div>")
+            snake.insertAdjacentHTML("beforeend", "<div></div>");
         };
+        // 获取尾巴
+        const tail = snakes[snakes.length - 1];
+        // 移动蛇的位置
+        tail.style.left = x + "px";
+        tail.style.top = y + "px";
+        // 将尾巴移动到蛇头的位置(上面改变的是CSS样式，结构没变，所以需要改结构才能动)
+        snake.insertAdjacentElement("afterbegin", tail);
+
         setTimeout(move, 300);
     }, 300);
 }
