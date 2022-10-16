@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 宽高代表整个box，而不是只有内容区 */
+  box-sizing: border-box;
+}
+#main {
+  height: 420px;
+  width: 360px;
+  border: 10px solid #000;
+  background-color: #b7d488;
+  border-radius: 30px;
+  margin: 100px auto;
+}
+#region {
+  border: 2px solid #000;
+  width: 304px;
+  height: 304px;
+  margin: 20px auto;
+  position: relative;
+}
+#info {
+  width: 304px;
+  display: flex;
+  margin: 30px auto;
+  justify-content: space-between;
+  font: 20px courier bold;
+}
+#food {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  position: absolute;
+  top: 100px;
+  left: 120px;
+}
+#snake > div {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  position: absolute;
+}
+/*# sourceMappingURL=./css.css.map */
