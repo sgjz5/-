@@ -9,13 +9,32 @@ window.onload = function () {
     // 获取蛇的所有部位
     const snakes = snake.getElementsByTagName("div");
 
+    /* 
+        游戏禁止掉头
+            1.身体超过2
+            2.不能是相反方向
+        处理
+            保持原来的方向不变（不修改dir的值）
+    */
+
+
     // 定义一个变量用来存储方向
     let dir;
-    const keyArr = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]
+    const keyArr = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+    // 创建一个对象
+    const reObj = {
+        ArrowDown: "ArrowUp",
+        ArrowUp: "ArrowDown",
+        ArrowRight: "ArrowLeft",
+        ArrowLeft: "ArrowRight"
+    };
     document.addEventListener("keydown", event => {
         // 设置方向,判定按下的按键是正确的
         if (keyArr.includes(event.key)) {
-            dir = event.key;
+            // 身体大于2的时候，前一个方向与后一个方向不同就不能掉头
+            if (snakes.length < 2 || reObj[dir] !== event.key) {
+                dir = event.key;
+            }
         }
     });
 
@@ -29,7 +48,6 @@ window.onload = function () {
         // 设置食物的坐标
         food.style.top = y + 'px';
         food.style.left = x + 'px';
-        console.log(x, y);
     }
     changeFood();
 
