@@ -125,7 +125,6 @@ window.onload = function () {
                 } else {
                     return;
                 }
-
             }
         }
         // 获取尾巴
