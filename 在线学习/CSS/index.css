@@ -1,0 +1,176 @@
+#header {
+  height: 100px;
+  background-color: #fff;
+}
+#header #navTop {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 100px;
+  width: 1200px;
+  margin: 0 auto;
+}
+#header #navTop #nav ul {
+  display: flex;
+  margin-left: 60px;
+}
+#header #navTop #nav ul li {
+  font-size: 18px;
+  margin-left: 18px;
+}
+#header #navTop #nav ul li a:hover {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #3a83ff;
+}
+#header #navTop #search {
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+}
+#header #navTop #search input {
+  width: 360px;
+  height: 38px;
+  border: 1px solid #3a83ff;
+  padding-left: 20px;
+  outline: none;
+}
+#header #navTop #search a {
+  padding-top: 4px;
+}
+#header #navTop #user {
+  margin-left: 20px;
+  display: flex;
+}
+#header #navTop #user p {
+  color: #bbbcbd;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+#banner {
+  height: 420px;
+  background-color: #1c036c;
+}
+#banner #content {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+#banner #content img {
+  position: absolute;
+}
+#banner #content #navLeft {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  height: 420px;
+  width: 190px;
+}
+#banner #content #navLeft ul {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0 20px;
+  height: 420px;
+  justify-content: space-around;
+}
+#banner #content #navLeft ul li {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#banner #content #navLeft ul a:hover li {
+  color: #00b4ff;
+}
+#banner #content #carouselChart {
+  position: absolute;
+  top: 370px;
+  left: 500px;
+}
+#banner #content #carouselChart ul {
+  display: flex;
+  width: 140px;
+  justify-content: space-between;
+}
+#banner #content #carouselChart ul li {
+  background-color: rgba(250, 250, 250, 0.3);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+#banner #content #carouselChart ul a:hover li {
+  width: 16px;
+  background-color: #fff;
+  border-radius: 45%;
+}
+#banner #content #navRight {
+  width: 228px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #00b4ff;
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+#banner #content #navRight #classScheduleCard {
+  height: 48px;
+  background-color: #9bceea;
+  color: #fff;
+  font-size: 18px;
+  line-height: 48px;
+  text-align: center;
+  margin: 0;
+}
+#banner #content #navRight div {
+  font-size: 16px;
+  color: #4e4e4e;
+  margin: 0 18px;
+  margin-top: 12px;
+}
+#banner #content #navRight div p {
+  font-size: 14px;
+  color: #a5a5a5;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #a5a5a5;
+}
+#banner #content #navRight #all {
+  margin: 4px auto;
+  text-align: center;
+  width: 200px;
+  height: 41px;
+  font-size: 16px;
+  border: #00a4ff solid 1px;
+  line-height: 41px;
+  font-weight: bolder;
+  box-shadow: 0 1px rgba(58, 131, 255, 0.3);
+}
+#banner #content #navRight #all a {
+  color: #00a4ff;
+}
+#secNav {
+  width: 1200px;
+  height: 66px;
+  background-color: #fff;
+  border: #00a4ff 1px solid;
+  line-height: 66px;
+  margin: 10px auto;
+}
+#secNav #recommend a,
+#secNav #recommend span {
+  margin-left: 20px;
+  font-size: 18px;
+}
+#secNav #recommend span {
+  color: #bebebe;
+}
+#secNav #recommend a:last-child {
+  color: #00a4ff;
+  margin-left: 170px;
+  font-size: 15px;
+}
+#secNav #recommend a:hover:not(a:last-child) {
+  color: #00a4ff;
+}
+/*# sourceMappingURL=./index.css.map */

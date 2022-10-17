@@ -1,0 +1,213 @@
+#header {
+    height: 100px;
+    background-color: #fff;
+
+    #navTop {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        height: 100px;
+        width: 1200px;
+        margin: 0 auto;
+
+        #nav ul {
+            display: flex;
+            margin-left: 60px;
+
+            li {
+                font-size: 18px;
+                margin-left: 18px;
+
+                a:hover {
+                    padding-bottom: 5px;
+                    border-bottom: 3px solid #3a83ff;
+                }
+            }
+        }
+
+        #search {
+            margin-left: 80px;
+            display: flex;
+            align-items: center;
+
+            input {
+                width: 360px;
+                height: 38px;
+                border: 1px solid #3a83ff;
+                padding-left: 20px;
+                outline: none;
+            }
+
+            a {
+                padding-top: 4px;
+            }
+        }
+
+        #user {
+            margin-left: 20px;
+            display: flex;
+            p {
+                color: #bbbcbd;
+                font-size: 14px;
+                line-height: 30px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+#banner {
+    height: 420px;
+    background-color: #1c036c;
+
+    #content {
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+
+        img {
+            position: absolute;
+        }
+
+        #navLeft {
+            background-color: rgba(0, 0, 0, .3);
+            position: absolute;
+            left: 0;
+            height: 420px;
+
+            width: 190px;
+
+            ul {
+                display: flex;
+                flex-flow: column wrap;
+                margin: 0 20px;
+                height: 420px;
+                justify-content: space-around;
+
+                li {
+                    color: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                a:hover li {
+                    color: #00b4ff;
+                }
+
+            }
+
+
+        }
+
+        #carouselChart {
+            position: absolute;
+            top: 370px;
+            left: 500px;
+
+            ul {
+                display: flex;
+                width: 140px;
+                justify-content: space-between;
+
+                li {
+                    background-color: rgba(250, 250, 250, .3);
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                }
+
+                a:hover li {
+                    width: 16px;
+                    background-color: #fff;
+                    border-radius: 45%;
+
+
+                }
+            }
+
+        }
+
+        #navRight {
+            width: 228px;
+            height: 300px;
+            background-color: #fff;
+            border: 1px solid #00b4ff;
+            position: absolute;
+            right: 0;
+            top: 50px;
+
+            #classScheduleCard {
+                height: 48px;
+                background-color: #9bceea;
+                color: #fff;
+                font-size: 18px;
+                line-height: 48px;
+                text-align: center;
+                margin: 0
+            }
+
+            div {
+                font-size: 16px;
+                color: #4e4e4e;
+                margin: 0 18px;
+                margin-top: 12px;
+
+                p {
+                    font-size: 14px;
+                    color: #a5a5a5;
+                    padding-bottom: 12px;
+                    border-bottom: 1px solid #a5a5a5;
+                }
+            }
+
+            #all {
+                margin: 4px auto;
+                text-align: center;
+                width: 200px;
+                height: 41px;
+                font-size: 16px;
+                border: #00a4ff solid 1px;
+                line-height: 41px;
+                font-weight: bolder;
+                box-shadow: 0 1px rgba(58, 131, 255, .3);
+                a{
+                    color: #00a4ff;
+                }
+            }
+        }
+    }
+}
+
+#secNav {
+    width: 1200px;
+    height: 66px;
+    background-color: #fff;
+    border: #00a4ff 1px solid;
+    line-height: 66px;
+    margin: 10px auto;
+
+    #recommend {
+
+        a,
+        span {
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        span {
+            color: #bebebe;
+        }
+        a:last-child{
+            color: #00a4ff;
+            margin-left: 170px;
+            font-size: 15px;
+        }
+        a:hover:not(a:last-child){
+            color: #00a4ff;
+        }
+
+    }
+}
