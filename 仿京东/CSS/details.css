@@ -1,6 +1,7 @@
 .shortcut-content .bg {
   display: flex;
   justify-content: space-between;
+  height: 31px;
   margin: 0 auto;
 }
 .shortcut-content .bg #fl,
@@ -9,12 +10,80 @@
   flex-flow: row wrap;
   line-height: 30px;
 }
+.shortcut-content .bg #fl div,
+.shortcut-content .bg #fr div,
 .shortcut-content .bg #fl li,
 .shortcut-content .bg #fr li {
   padding-left: 8px;
 }
+.shortcut-content .bg #fl div a:hover,
+.shortcut-content .bg #fr div a:hover,
 .shortcut-content .bg #fl li a:hover,
 .shortcut-content .bg #fr li a:hover {
   color: #f30213;
+}
+.shortcut-content .bg #fl .drop-down,
+.shortcut-content .bg #fr .drop-down {
+  margin-left: 3px;
+  border: 1px solid transparent;
+}
+.shortcut-content .bg #fl .drop-down:hover,
+.shortcut-content .bg #fr .drop-down:hover {
+  position: relative;
+  width: 66px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  z-index: 10;
+  border-bottom: none;
+}
+.shortcut-content .bg #fl .drop-down:hover ~ .location,
+.shortcut-content .bg #fr .drop-down:hover ~ .location,
+.shortcut-content .bg #fl .location:hover,
+.shortcut-content .bg #fr .location:hover {
+  width: 315px;
+  height: 465px;
+}
+.shortcut-content .bg .location {
+  width: 315px;
+  height: 465px;
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid #dddddd;
+  left: 430px;
+  z-index: 2;
+  top: 29px;
+  overflow: hidden;
+}
+.shortcut-content .bg .location #place {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  width: 300px;
+}
+.shortcut-content .bg .location #place li {
+  padding: 2px 0;
+  width: 60px;
+}
+.shortcut-content .bg .location #place li a:hover:not(.active) {
+  padding: 5px;
+  background-color: #f4f4f4;
+}
+.shortcut-content .bg .location #place li .active {
+  padding: 5px;
+  color: #fff;
+  background-color: #f30213;
+}
+.shortcut-content .bg .location .underline {
+  width: 280px;
+  margin-left: 15px;
+  border-bottom: 1px solid #dddddd;
+}
+.shortcut-content .bg .location .exclusive {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.shortcut-content .bg .location .exclusive a:nth-child(3) {
+  margin-left: 100px;
 }
 /*# sourceMappingURL=./details.css.map */

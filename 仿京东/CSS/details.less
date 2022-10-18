@@ -2,20 +2,85 @@
     .bg {
         display: flex;
         justify-content: space-between;
+        height: 31px;
         margin: 0 auto;
         #fl,
         #fr {
             display: flex;
             flex-flow: row wrap;
             line-height: 30px;
-            li{
+            div,li {
                 padding-left: 8px;
-                a:hover{
+                a:hover {
                     color: #f30213;
                 }
             }
+            // 预先添加border防止点击的时候会动
+            .drop-down{
+                margin-left: 3px;
+                border: 1px solid transparent;
+            }
+            // 下拉的样式
+            .drop-down:hover
+            {
+                position: relative;
+                width: 66px;
+                height: 30px;
+                background-color: #fff;
+                border: 1px solid rgb(221, 221, 221);
+                z-index: 10;
+                border-bottom: none;
+            }
+            .drop-down:hover~.location,
+            .location:hover{
+            width: 315px;
+            height: 465px;
+            }
+        }        
+        .location {
+            width: 315px;
+            height: 465px;
+            background-color: #fff;
+            position: absolute;
+            border: 1px solid rgb(221, 221, 221);
+            left: 430px;
+            z-index: 2;
+            top: 29px;
+            overflow: hidden;
+            #place{
+                display: flex;
+                flex-flow: row wrap;
+                text-align: center;
+                width: 300px;
+                
+                li{
+                    padding: 2px 0;
+                    width: 60px;
+                    a:hover:not(.active){
+                        padding: 5px;
+                        background-color:rgb(244, 244, 244);
+                    }
+                    .active{
+                        padding: 5px;
+                        color: #fff;
+                        background-color: #f30213;
+                    }
+                }
+            }
+            .underline{
+                width: 280px;
+                margin-left: 15px;
+                border-bottom: 1px solid rgb(221, 221, 221);
+            }
+            .exclusive{
+                margin-left: 20px;
+                margin-top: 10px;
+                a:nth-child(3){
+                    margin-left: 100px;
+                }
+            }
+            
         }
     }
-
 
 }
