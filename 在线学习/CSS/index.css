@@ -12,7 +12,7 @@
 }
 #header #navTop #nav ul {
   display: flex;
-  margin-left: 60px;
+  margin-left: 79px;
 }
 #header #navTop #nav ul li {
   font-size: 18px;
@@ -23,7 +23,7 @@
   border-bottom: 3px solid #3a83ff;
 }
 #header #navTop #search {
-  margin-left: 80px;
+  margin-left: 94px;
   display: flex;
   align-items: center;
 }
@@ -38,7 +38,7 @@
   padding-top: 4px;
 }
 #header #navTop #user {
-  margin-left: 20px;
+  margin-left: 31px;
   display: flex;
 }
 #header #navTop #user p {
@@ -172,5 +172,141 @@
 }
 #secNav #recommend a:hover:not(a:last-child) {
   color: #00a4ff;
+}
+.article {
+  width: 1200px;
+  margin: 0 auto;
+}
+.article .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article .title .level {
+  width: 338px;
+  display: flex;
+  justify-content: space-between;
+}
+.article .title .level span {
+  font-size: 16px;
+  color: #868686;
+}
+.article .title .level a:hover span {
+  color: #00a4ff;
+}
+.article .title span {
+  font-size: 20px;
+  color: #494949;
+}
+.article .title a {
+  font-size: 12px;
+  color: #a5a5a5;
+}
+.article #cardContent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.article .card {
+  margin-top: 21px;
+  width: 228px;
+  height: 270px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(118, 118, 118, 0.5);
+}
+.article .card img {
+  width: 100%;
+}
+.article .card .cardTitle {
+  width: 184px;
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #050505;
+  margin-top: 21px;
+  margin-left: 25px;
+}
+.article .card .number {
+  display: flex;
+  font-size: 12px;
+  color: #606060;
+  margin-top: 20px;
+  margin-left: 23px;
+}
+.article .card .number p {
+  color: #ff7c2d;
+}
+.anther {
+  margin-top: 38px;
+}
+.anther .content {
+  display: flex;
+  justify-content: space-between;
+}
+.anther .content #cardContent img {
+  margin-left: 15px;
+}
+.anther .content #cardContent .card {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.anther .content #cardContent .card img {
+  margin-left: 0;
+}
+#footer {
+  background-color: #fff;
+  margin-top: 40px;
+}
+#footer #footerContent {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+#footer #footerContent #left {
+  display: flex;
+  flex-flow: column wrap;
+}
+#footer #footerContent #left img {
+  width: 195px;
+  margin-top: 33px;
+}
+#footer #footerContent #left span {
+  width: 423px;
+  margin-top: 24px;
+  color: #666;
+  line-height: 18px;
+  font-size: 12px;
+}
+#footer #footerContent #left #downLoad {
+  margin-top: 15px;
+  width: 120px;
+  height: 36px;
+  border: solid 1px #00a4ff;
+  line-height: 36px;
+  text-align: center;
+}
+#footer #footerContent #left #downLoad a {
+  color: #00a4ff;
+  font: 16px/18px MicrosoftYaHei;
+}
+#footer #footerContent #right {
+  width: 426px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#footer #footerContent #right .title {
+  color: #333;
+  margin-top: 33px;
+  font: 16px/21px MicrosoftYaHei;
+}
+#footer #footerContent #right .title ul {
+  margin-top: 15px;
+}
+#footer #footerContent #right .title ul li a {
+  height: 96px;
+  font: 12px/21px SimSun;
 }
 /*# sourceMappingURL=./index.css.map */

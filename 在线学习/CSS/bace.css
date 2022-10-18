@@ -9,4 +9,10 @@ a {
   text-decoration: none;
   color: black;
 }
+.maginBottom {
+  margin-bottom: 22px;
+}
+body {
+  background-color: #f3f5f7;
+}
 /*# sourceMappingURL=./bace.css.map */
