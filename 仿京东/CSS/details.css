@@ -1,0 +1,20 @@
+.shortcut-content .bg {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.shortcut-content .bg #fl,
+.shortcut-content .bg #fr {
+  display: flex;
+  flex-flow: row wrap;
+  line-height: 30px;
+}
+.shortcut-content .bg #fl li,
+.shortcut-content .bg #fr li {
+  padding-left: 8px;
+}
+.shortcut-content .bg #fl li a:hover,
+.shortcut-content .bg #fr li a:hover {
+  color: #f30213;
+}
+/*# sourceMappingURL=./details.css.map */
