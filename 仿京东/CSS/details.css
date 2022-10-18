@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   height: 31px;
-  margin: 0 auto;
 }
 .shortcut-content .bg #fl,
 .shortcut-content .bg #fr {
@@ -40,16 +39,19 @@
 .shortcut-content .bg #fr .drop-down:hover > .location {
   display: block;
 }
-.shortcut-content .bg #fl .location {
-  width: 315px;
-  height: 465px;
+.shortcut-content .bg #fl .drop,
+.shortcut-content .bg #fr .drop {
   background-color: #fff;
   position: absolute;
   border: 1px solid #dddddd;
-  left: 435px;
-  z-index: 9;
-  top: 29px;
   display: none;
+  z-index: 9;
+}
+.shortcut-content .bg #fl .location {
+  width: 315px;
+  height: 465px;
+  left: 435px;
+  top: 29px;
 }
 .shortcut-content .bg #fl .location #place {
   display: flex;
@@ -82,49 +84,54 @@
 .shortcut-content .bg #fl .location .exclusive a:nth-child(3) {
   margin-left: 100px;
 }
-.shortcut-content .bg #fr .drop-down-bg {
-  margin-left: 3px;
-}
-.shortcut-content .bg #fr .location {
-  width: 315px;
-  height: 465px;
-  background-color: #fff;
-  position: absolute;
-  border: 1px solid #dddddd;
-  left: 435px;
+.shortcut-content .bg #fr .myjd {
+  width: 285px;
+  height: 145px;
+  left: 985px;
   z-index: 9;
   top: 29px;
-  display: none;
 }
-.shortcut-content .bg #fr .location #place {
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  width: 300px;
+.shortcut-content .bg #fr .drop-down:hover > .myjd {
+  display: block;
 }
-.shortcut-content .bg #fr .location #place li {
-  padding: 2px 0;
-  width: 60px;
+.shortcut-content .bg #fr .qycg {
+  width: 158px;
+  height: 140px;
+  left: 1145px;
+  z-index: 9;
+  top: 29px;
 }
-.shortcut-content .bg #fr .location #place li a:hover:not(.active) {
-  padding: 5px;
-  background-color: #f4f4f4;
+.shortcut-content .bg #fr .drop-down:hover > .qycg {
+  display: block;
 }
-.shortcut-content .bg #fr .location #place li .active {
-  padding: 5px;
-  color: #fff;
-  background-color: #f30213;
+.shortcut-content .bg #fr .khfw {
+  width: 158px;
+  height: 140px;
+  left: 1145px;
+  z-index: 9;
+  top: 29px;
 }
-.shortcut-content .bg #fr .location .underline {
-  width: 280px;
-  margin-left: 15px;
-  border-bottom: 1px solid #dddddd;
+.shortcut-content .bg #fr .drop-down:hover > .khfw {
+  display: block;
 }
-.shortcut-content .bg #fr .location .exclusive {
-  margin-left: 20px;
-  margin-top: 10px;
+.shortcut-content .bg #fr .wzdh {
+  width: 158px;
+  height: 140px;
+  left: 1245px;
+  z-index: 9;
+  top: 29px;
 }
-.shortcut-content .bg #fr .location .exclusive a:nth-child(3) {
-  margin-left: 100px;
+.shortcut-content .bg #fr .drop-down:hover > .wzdh {
+  display: block;
+}
+.shortcut-content .bg #fr .sjjd {
+  width: 158px;
+  height: 140px;
+  left: 1325px;
+  z-index: 9;
+  top: 29px;
+}
+.shortcut-content .bg #fr .drop-down:hover > .sjjd {
+  display: block;
 }
 /*# sourceMappingURL=./details.css.map */

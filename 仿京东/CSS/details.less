@@ -3,7 +3,6 @@
         display: flex;
         justify-content: space-between;
         height: 31px;
-        margin: 0 auto;
 
         #fl,
         #fr {
@@ -35,22 +34,27 @@
                 z-index: 10;
                 border-bottom: none;
             }
+
             // 鼠标在drop-down上显示隐藏的下拉框
             .drop-down:hover>.location {
                 display: block;
+            }
+
+            // 下拉的通用
+            .drop {
+                background-color: #fff;
+                position: absolute;
+                border: 1px solid rgb(221, 221, 221);
+                display: none;
+                z-index: 9;
             }
         }
 
         #fl .location {
             width: 315px;
             height: 465px;
-            background-color: #fff;
-            position: absolute;
-            border: 1px solid rgb(221, 221, 221);
             left: 435px;
-            z-index: 9;
             top: 29px;
-            display: none;
 
             #place {
                 display: flex;
@@ -92,62 +96,64 @@
 
         }
 
-        #fr{
-            .drop-down-bg {
-                margin-left: 3px;
+        #fr {
+            .myjd {
+                width: 285px;
+                height: 145px;
+                left: 985px;
+                z-index:9;
+                top: 29px;
             }
 
-            .location {
-                width: 315px;
-                height: 465px;
-                background-color: #fff;
-                position: absolute;
-                border: 1px solid rgb(221, 221, 221);
-                left: 435px;
-                z-index: 9;
-                top: 29px;
-                display: none;
-    
-                #place {
-                    display: flex;
-                    flex-flow: row wrap;
-                    text-align: center;
-                    width: 300px;
-    
-                    li {
-                        padding: 2px 0;
-                        width: 60px;
-    
-                        a:hover:not(.active) {
-                            padding: 5px;
-                            background-color: rgb(244, 244, 244);
-                        }
-    
-                        .active {
-                            padding: 5px;
-                            color: #fff;
-                            background-color: #f30213;
-                        }
-                    }
-                }
-    
-                .underline {
-                    width: 280px;
-                    margin-left: 15px;
-                    border-bottom: 1px solid rgb(221, 221, 221);
-                }
-    
-                .exclusive {
-                    margin-left: 20px;
-                    margin-top: 10px;
-    
-                    a:nth-child(3) {
-                        margin-left: 100px;
-                    }
-                }
-    
+            .drop-down:hover>.myjd{
+                display: block;
             }
-    
+
+            .qycg {
+                width: 158px;
+                height: 140px;
+                left: 1145px;
+                z-index:9;
+                top: 29px;
+            }
+
+            .drop-down:hover>.qycg{
+                display: block;
+            }
+            .khfw {
+                width: 158px;
+                height: 140px;
+                left: 1145px;
+                z-index:9;
+                top: 29px;
+            }
+
+            .drop-down:hover>.khfw{
+                display: block;
+            }
+            .wzdh {
+                width: 158px;
+                height: 140px;
+                left: 1245px;
+                z-index:9;
+                top: 29px;
+            }
+
+            .drop-down:hover>.wzdh{
+                display: block;
+            }
+            .sjjd {
+                width: 158px;
+                height: 140px;
+                left: 1325px;
+                z-index:9;
+                top: 29px;
+            }
+
+            .drop-down:hover>.sjjd{
+                display: block;
+            }
+
         }
 
     }
