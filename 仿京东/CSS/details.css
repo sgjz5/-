@@ -13,7 +13,7 @@
 .shortcut-content .bg #fr div,
 .shortcut-content .bg #fl li,
 .shortcut-content .bg #fr li {
-  padding-left: 8px;
+  padding: 0 4px;
 }
 .shortcut-content .bg #fl div a:hover,
 .shortcut-content .bg #fr div a:hover,
@@ -23,12 +23,15 @@
 }
 .shortcut-content .bg #fl .drop-down-bg,
 .shortcut-content .bg #fr .drop-down-bg {
+  position: relative;
   border: 1px solid transparent;
+}
+.shortcut-content .bg #fl .drop-down,
+.shortcut-content .bg #fr .drop-down {
+  position: relative;
 }
 .shortcut-content .bg #fl .drop-down:hover > .drop-down-bg,
 .shortcut-content .bg #fr .drop-down:hover > .drop-down-bg {
-  position: relative;
-  width: 66px;
   height: 30px;
   background-color: #fff;
   border: 1px solid #dddddd;
@@ -45,13 +48,16 @@
   position: absolute;
   border: 1px solid #dddddd;
   display: none;
+  left: 4px;
   z-index: 9;
+  top: 29px;
+}
+.shortcut-content .bg #fl .drop-down:hover > .drop-down-bg {
+  width: 60px;
 }
 .shortcut-content .bg #fl .location {
   width: 315px;
   height: 465px;
-  left: 435px;
-  top: 29px;
 }
 .shortcut-content .bg #fl .location #place {
   display: flex;
@@ -87,9 +93,6 @@
 .shortcut-content .bg #fr .myjd {
   width: 285px;
   height: 145px;
-  left: 985px;
-  z-index: 9;
-  top: 29px;
 }
 .shortcut-content .bg #fr .drop-down:hover > .myjd {
   display: block;
@@ -97,9 +100,6 @@
 .shortcut-content .bg #fr .qycg {
   width: 158px;
   height: 140px;
-  left: 1145px;
-  z-index: 9;
-  top: 29px;
 }
 .shortcut-content .bg #fr .drop-down:hover > .qycg {
   display: block;
@@ -107,9 +107,6 @@
 .shortcut-content .bg #fr .khfw {
   width: 158px;
   height: 140px;
-  left: 1145px;
-  z-index: 9;
-  top: 29px;
 }
 .shortcut-content .bg #fr .drop-down:hover > .khfw {
   display: block;
@@ -117,9 +114,6 @@
 .shortcut-content .bg #fr .wzdh {
   width: 158px;
   height: 140px;
-  left: 1245px;
-  z-index: 9;
-  top: 29px;
 }
 .shortcut-content .bg #fr .drop-down:hover > .wzdh {
   display: block;
@@ -127,9 +121,6 @@
 .shortcut-content .bg #fr .sjjd {
   width: 158px;
   height: 140px;
-  left: 1325px;
-  z-index: 9;
-  top: 29px;
 }
 .shortcut-content .bg #fr .drop-down:hover > .sjjd {
   display: block;

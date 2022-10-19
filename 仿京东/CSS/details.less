@@ -12,7 +12,7 @@
 
             div,
             li {
-                padding-left: 8px;
+                padding: 0 4px;
 
                 a:hover {
                     color: #f30213;
@@ -21,13 +21,16 @@
 
             // 预先添加border防止点击的时候会动
             .drop-down-bg {
+                position: relative;
                 border: 1px solid transparent;
+            }
+
+            .drop-down {
+                position: relative;
             }
 
             // 下拉的样式
             .drop-down:hover>.drop-down-bg {
-                position: relative;
-                width: 66px;
                 height: 30px;
                 background-color: #fff;
                 border: 1px solid rgb(221, 221, 221);
@@ -46,15 +49,19 @@
                 position: absolute;
                 border: 1px solid rgb(221, 221, 221);
                 display: none;
+                left: 4px;
                 z-index: 9;
+                top: 29px;
             }
+        }
+
+        #fl .drop-down:hover>.drop-down-bg {
+            width: 60px;
         }
 
         #fl .location {
             width: 315px;
             height: 465px;
-            left: 435px;
-            top: 29px;
 
             #place {
                 display: flex;
@@ -100,57 +107,45 @@
             .myjd {
                 width: 285px;
                 height: 145px;
-                left: 985px;
-                z-index:9;
-                top: 29px;
             }
 
-            .drop-down:hover>.myjd{
+            .drop-down:hover>.myjd {
                 display: block;
             }
 
             .qycg {
                 width: 158px;
                 height: 140px;
-                left: 1145px;
-                z-index:9;
-                top: 29px;
             }
 
-            .drop-down:hover>.qycg{
+            .drop-down:hover>.qycg {
                 display: block;
             }
+
             .khfw {
                 width: 158px;
                 height: 140px;
-                left: 1145px;
-                z-index:9;
-                top: 29px;
             }
 
-            .drop-down:hover>.khfw{
+            .drop-down:hover>.khfw {
                 display: block;
             }
+
             .wzdh {
                 width: 158px;
                 height: 140px;
-                left: 1245px;
-                z-index:9;
-                top: 29px;
             }
 
-            .drop-down:hover>.wzdh{
+            .drop-down:hover>.wzdh {
                 display: block;
             }
+
             .sjjd {
                 width: 158px;
                 height: 140px;
-                left: 1325px;
-                z-index:9;
-                top: 29px;
             }
 
-            .drop-down:hover>.sjjd{
+            .drop-down:hover>.sjjd {
                 display: block;
             }
 
