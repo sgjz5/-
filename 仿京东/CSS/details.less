@@ -13,6 +13,7 @@
             flex-flow: row wrap;
             line-height: 30px;
 
+
             div {
                 padding: 0 4px;
 
@@ -171,7 +172,6 @@
         a {
             color: #666;
             padding-right: 4px;
-
             font-size: 12px;
         }
 
@@ -197,29 +197,29 @@
             height: 35px;
             padding: 0 8px;
             border: none;
-        }
 
-        input:first-child {
-            height: 23px;
-            width: 446px;
-            padding: 4px;
-            border: 2px solid rgb(182, 29, 29);
-            border-right: none;
-        }
+            &:first-child {
+                height: 23px;
+                width: 446px;
+                padding: 4px;
+                border: 2px solid rgb(182, 29, 29);
+                border-right: none;
+            }
 
-        input:nth-child(2) {
-            background-color: rgb(182, 29, 29);
-            vertical-align: bottom;
-            color: #fff;
-            // 小手
-            cursor: pointer;
-        }
+            &:nth-child(2) {
+                background-color: rgb(182, 29, 29);
+                vertical-align: bottom;
+                color: #fff;
+                // 小手
+                cursor: pointer;
+            }
 
-        input:nth-child(3) {
-            background-color: rgb(71, 78, 92);
-            vertical-align: bottom;
-            color: #fff;
-            cursor: pointer;
+            &:nth-child(3) {
+                background-color: rgb(71, 78, 92);
+                vertical-align: bottom;
+                color: #fff;
+                cursor: pointer;
+            }
         }
     }
 
@@ -242,16 +242,13 @@
             color: #f30213;
         }
 
-        i:nth-child(1) {
-            color: rgb(200, 23, 36);
-        }
-
         i {
             color: #999;
+
+            &:nth-child(1) {
+                color: rgb(200, 23, 36);
+            }
         }
-
-
-
     }
 }
 
@@ -271,22 +268,24 @@
         display: flex;
 
         li {
-            a{
+            a {
                 line-height: 40px;
                 margin-left: 30px;
                 color: #fff;
                 font-size: 15px;
                 font-family: 微软雅黑;
-                img{
+
+                img {
                     margin-left: 10px;
                 }
-                
-            }
-            a:not(.all):hover{
-                color: rgb(255,225,120);
+
             }
 
-            
+            a:not(.all):hover {
+                color: rgb(255, 225, 120);
+            }
+
+
         }
     }
 
@@ -319,16 +318,17 @@
     }
 }
 
-#content{
+#content {
 
-    #nav-path{
+    #nav-path {
         width: 1210px;
         margin: 0 auto;
         height: 40px;
         line-height: 40px;
         display: flex;
         align-items: center;
-        a{
+
+        a {
             color: #666;
             font-size: 12px;
             margin: auto 6px;

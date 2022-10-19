@@ -189,11 +189,11 @@
 .search-bar-content #my-car a:hover {
   color: #f30213;
 }
-.search-bar-content #my-car i:nth-child(1) {
-  color: #c81724;
-}
 .search-bar-content #my-car i {
   color: #999;
+}
+.search-bar-content #my-car i:nth-child(1) {
+  color: #c81724;
 }
 #nav {
   width: 100%;
