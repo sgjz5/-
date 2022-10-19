@@ -195,4 +195,77 @@
 .search-bar-content #my-car i {
   color: #999;
 }
+#nav {
+  width: 100%;
+  height: 40px;
+  background-color: #333;
+  display: flex;
+}
+#nav #nav-content {
+  display: flex;
+  margin: 0 auto;
+  width: 1210px;
+}
+#nav ul {
+  display: flex;
+}
+#nav ul li a {
+  line-height: 40px;
+  margin-left: 30px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 微软雅黑;
+}
+#nav ul li a img {
+  margin-left: 10px;
+}
+#nav ul li a:not(.all):hover {
+  color: #ffe178;
+}
+#nav input {
+  margin: auto 0;
+  margin-left: 30px;
+  padding: 0 0 0 10px;
+  width: 120px;
+  line-height: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  color: #c9c9c9;
+  outline: none;
+  border: solid 1px #e1e1e1;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+#nav button {
+  margin: auto 0;
+  background-color: transparent;
+  margin-left: -5px;
+  padding: 0 10px;
+  border: 0;
+  height: 24px;
+  width: 46px;
+  cursor: pointer;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+#content #nav-path {
+  width: 1210px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+}
+#content #nav-path a {
+  color: #666;
+  font-size: 12px;
+  margin: auto 6px;
+}
+#content #nav-path .ellipsis {
+  width: 120px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
 /*# sourceMappingURL=./details.css.map */
