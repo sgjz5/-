@@ -1,17 +1,19 @@
 .shortcut-content {
+
+    // 背景
     .bg {
         display: flex;
         justify-content: space-between;
         height: 31px;
 
+        // 通用
         #fl,
         #fr {
             display: flex;
             flex-flow: row wrap;
             line-height: 30px;
 
-            div,
-            li {
+            div {
                 padding: 0 4px;
 
                 a:hover {
@@ -59,6 +61,7 @@
             width: 60px;
         }
 
+        //下拉框内样式 
         #fl .location {
             width: 315px;
             height: 465px;
@@ -86,6 +89,7 @@
                 }
             }
 
+            // 下划线
             .underline {
                 width: 280px;
                 margin-left: 15px;
@@ -103,14 +107,20 @@
 
         }
 
+        // 右边不同的
         #fr {
+
+            .drop-down:hover>.myjd,
+            .drop-down:hover>.qycg,
+            .drop-down:hover>.khfw,
+            .drop-down:hover>.wzdh,
+            .drop-down:hover>.sjjd {
+                display: block;
+            }
+
             .myjd {
                 width: 285px;
                 height: 145px;
-            }
-
-            .drop-down:hover>.myjd {
-                display: block;
             }
 
             .qycg {
@@ -118,17 +128,9 @@
                 height: 140px;
             }
 
-            .drop-down:hover>.qycg {
-                display: block;
-            }
-
             .khfw {
                 width: 158px;
                 height: 140px;
-            }
-
-            .drop-down:hover>.khfw {
-                display: block;
             }
 
             .wzdh {
@@ -136,21 +138,118 @@
                 height: 140px;
             }
 
-            .drop-down:hover>.wzdh {
-                display: block;
-            }
 
             .sjjd {
                 width: 158px;
                 height: 140px;
             }
-
-            .drop-down:hover>.sjjd {
-                display: block;
-            }
-
         }
 
     }
 
+}
+
+.search-bar-content {
+    margin: 0 auto;
+
+    div {
+        float: left;
+    }
+
+    #logo {
+        padding: 20px 0;
+    }
+
+    #classification {
+        margin: 35px;
+        border: 1px solid #999;
+        width: 75px;
+        height: 23px;
+        text-align: center;
+        line-height: 23px;
+
+        a {
+            color: #666;
+            padding-right: 4px;
+
+            font-size: 12px;
+        }
+
+        i {
+            color: #999;
+            transition: all 0.3s;
+        }
+
+    }
+
+    #classification:hover i {
+        transform: rotate(180deg);
+    }
+
+    #search {
+        padding-left: 80px;
+        height: 36px;
+        margin-top: 25px;
+        font-size: 0;
+
+        input {
+            height: 35px;
+            padding: 0 8px;
+            border: none;
+        }
+
+        input:first-child {
+            height: 23px;
+            width: 446px;
+            padding: 4px;
+            border: 2px solid rgb(182, 29, 29);
+            border-right: none;
+        }
+
+        input:nth-child(2) {
+            background-color: rgb(182, 29, 29);
+            vertical-align: bottom;
+            color: #fff;
+            // 小手
+            cursor: pointer;
+        }
+
+        input:nth-child(3) {
+            background-color: rgb(71, 78, 92);
+            vertical-align: bottom;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    #my-car {
+        margin: 25px;
+        margin-left: 65px;
+        height: 34px;
+        padding-left: 25px;
+        padding-right: 10px;
+        border: 1px solid rgb(223, 223, 223);
+        line-height: 34px;
+
+        a {
+            padding-left: 5px;
+            padding-right: 15px;
+            color: #666;
+        }
+
+        a:hover {
+            color: #f30213;
+        }
+
+        i:nth-child(1) {
+            color: rgb(200, 23, 36);
+        }
+
+        i {
+            color: #999;
+        }
+
+
+
+    }
 }

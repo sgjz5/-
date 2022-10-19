@@ -10,15 +10,11 @@
   line-height: 30px;
 }
 .shortcut-content .bg #fl div,
-.shortcut-content .bg #fr div,
-.shortcut-content .bg #fl li,
-.shortcut-content .bg #fr li {
+.shortcut-content .bg #fr div {
   padding: 0 4px;
 }
 .shortcut-content .bg #fl div a:hover,
-.shortcut-content .bg #fr div a:hover,
-.shortcut-content .bg #fl li a:hover,
-.shortcut-content .bg #fr li a:hover {
+.shortcut-content .bg #fr div a:hover {
   color: #f30213;
 }
 .shortcut-content .bg #fl .drop-down-bg,
@@ -90,39 +86,113 @@
 .shortcut-content .bg #fl .location .exclusive a:nth-child(3) {
   margin-left: 100px;
 }
+.shortcut-content .bg #fr .drop-down:hover > .myjd,
+.shortcut-content .bg #fr .drop-down:hover > .qycg,
+.shortcut-content .bg #fr .drop-down:hover > .khfw,
+.shortcut-content .bg #fr .drop-down:hover > .wzdh,
+.shortcut-content .bg #fr .drop-down:hover > .sjjd {
+  display: block;
+}
 .shortcut-content .bg #fr .myjd {
   width: 285px;
   height: 145px;
-}
-.shortcut-content .bg #fr .drop-down:hover > .myjd {
-  display: block;
 }
 .shortcut-content .bg #fr .qycg {
   width: 158px;
   height: 140px;
 }
-.shortcut-content .bg #fr .drop-down:hover > .qycg {
-  display: block;
-}
 .shortcut-content .bg #fr .khfw {
   width: 158px;
   height: 140px;
-}
-.shortcut-content .bg #fr .drop-down:hover > .khfw {
-  display: block;
 }
 .shortcut-content .bg #fr .wzdh {
   width: 158px;
   height: 140px;
 }
-.shortcut-content .bg #fr .drop-down:hover > .wzdh {
-  display: block;
-}
 .shortcut-content .bg #fr .sjjd {
   width: 158px;
   height: 140px;
 }
-.shortcut-content .bg #fr .drop-down:hover > .sjjd {
-  display: block;
+.search-bar-content {
+  margin: 0 auto;
+}
+.search-bar-content div {
+  float: left;
+}
+.search-bar-content #logo {
+  padding: 20px 0;
+}
+.search-bar-content #classification {
+  margin: 35px;
+  border: 1px solid #999;
+  width: 75px;
+  height: 23px;
+  text-align: center;
+  line-height: 23px;
+}
+.search-bar-content #classification a {
+  color: #666;
+  padding-right: 4px;
+  font-size: 12px;
+}
+.search-bar-content #classification i {
+  color: #999;
+  transition: all 0.3s;
+}
+.search-bar-content #classification:hover i {
+  transform: rotate(180deg);
+}
+.search-bar-content #search {
+  padding-left: 80px;
+  height: 36px;
+  margin-top: 25px;
+  font-size: 0;
+}
+.search-bar-content #search input {
+  height: 35px;
+  padding: 0 8px;
+  border: none;
+}
+.search-bar-content #search input:first-child {
+  height: 23px;
+  width: 446px;
+  padding: 4px;
+  border: 2px solid #b61d1d;
+  border-right: none;
+}
+.search-bar-content #search input:nth-child(2) {
+  background-color: #b61d1d;
+  vertical-align: bottom;
+  color: #fff;
+  cursor: pointer;
+}
+.search-bar-content #search input:nth-child(3) {
+  background-color: #474e5c;
+  vertical-align: bottom;
+  color: #fff;
+  cursor: pointer;
+}
+.search-bar-content #my-car {
+  margin: 25px;
+  margin-left: 65px;
+  height: 34px;
+  padding-left: 25px;
+  padding-right: 10px;
+  border: 1px solid #dfdfdf;
+  line-height: 34px;
+}
+.search-bar-content #my-car a {
+  padding-left: 5px;
+  padding-right: 15px;
+  color: #666;
+}
+.search-bar-content #my-car a:hover {
+  color: #f30213;
+}
+.search-bar-content #my-car i:nth-child(1) {
+  color: #c81724;
+}
+.search-bar-content #my-car i {
+  color: #999;
 }
 /*# sourceMappingURL=./details.css.map */
