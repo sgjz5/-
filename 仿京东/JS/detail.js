@@ -1,6 +1,6 @@
 window.onload = function () {
-
-
+    let imgindex = 0;
+    const imgData = goodData.img;
     navPathDataBind();
     // 路劲导航的数据渲染
     function navPathDataBind() {
@@ -48,11 +48,17 @@ window.onload = function () {
         const smallPicture = document.querySelector("#small-picture");
         const bigPicture = document.querySelector("#big-picture");
 
+        // 默认小图
+        const smallImg = document.createElement("img");
+        smallImg.src = imgData[imgindex].b;
+        smallPicture.appendChild(smallImg);
+
         smallPicture.addEventListener("mouseenter", (event) => {
             // 创建大图框
             const bigImg = document.createElement("img");
-            bigImg.src = "./IMG/hs1da.avif";
+            bigImg.src = imgData[imgindex].d;
             bigPicture.appendChild(bigImg);
+
 
 
             // 创建蒙版
@@ -60,9 +66,6 @@ window.onload = function () {
             maskElement.id = "mask";
             // 添加
             smallPicture.appendChild(maskElement);
-
-            // 出现大图
-            bigPicture.style.display = "block";
 
             smallPicture.addEventListener("mousemove", (event) => {
                 /* 
@@ -107,11 +110,67 @@ window.onload = function () {
             smallPicture.addEventListener("mouseleave", () => {
                 maskElement.remove();
                 bigImg.remove();
-                bigPicture.style.display = "none";
             })
 
         })
 
     }
     magnifyingLens()
+
+    // 动态渲染放大镜缩略图数据
+    function thumbnailData() {
+        /* 
+            1.获取ul
+            2.获取data.js下的图片数据
+            3.遍历数组
+        */
+        const pic = document.querySelector("ul.pic")
+
+
+        for (let i = 0; i < imgData.length; i++) {
+            // 创建元素
+            const liNode = document.createElement("li");
+            const imgNode = document.createElement("img");
+            // 生成
+            imgNode.src = imgData[i].s;
+            liNode.appendChild(imgNode);
+            pic.appendChild(liNode);
+        }
+
+    }
+    thumbnailData()
+    // 切换缩略图的效果
+    function thumbnailEnter() {
+        /* 
+            获取所有li元素，并且循环发生点击事件
+            点击缩略图需要确定其下表位置来找到对应小图路径和大图路径替换现有的src的值
+        */
+        const liNode = document.querySelectorAll("ul.pic li");
+        const smallPicture = document.querySelector("#small-picture");
+
+        for (let i = 0; i < liNode.length; i++) {
+            imgindex = i;//给全局的imgindex赋值，让其他函数可以获取下标
+            liNode[0].className = "clock";
+            liNode[i].addEventListener('mouseover', () => {
+                liNode[i].firstElementChild.src = imgData[i].s;
+                smallPicture.children[1].src = imgData[i].b;
+                let clock = document.querySelector("#content .center #left #left-bottom .piclist .pic .clock");
+                clock.classList.remove("clock");
+                // 获取到当前要显示的缩略图
+                liNode[i].classList.add("clock");
+            })
+
+
+        }
+
+
+
+
+
+    }
+    thumbnailEnter()
+
+
+
+
 }

@@ -303,7 +303,6 @@
   overflow: hidden;
   position: absolute;
   left: 450px;
-  display: none;
 }
 #content .center #left #left-top #big-picture img {
   position: absolute;
@@ -348,10 +347,10 @@
 #content .center #left #left-bottom .piclist .pic li {
   height: 54px;
   width: 54px;
-  margin: 0 9px;
+  margin: 0 10px;
   border: 2px solid transparent;
 }
-#content .center #left #left-bottom .piclist .pic li.clock:hover {
+#content .center #left #left-bottom .piclist .pic .clock {
   border: 2px solid #f30213;
 }
 /*# sourceMappingURL=./details.css.map */
