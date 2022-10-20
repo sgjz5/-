@@ -279,6 +279,15 @@
   border: 1px solid #eeeeee;
   position: relative;
 }
+#content .center #left #left-top #small-picture .icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 420px;
+  left: 420px;
+  background-image: url("../IMG/__sprite.png");
+  background-position: 0 -24px;
+}
 #content .center #left #left-top #small-picture #mask {
   width: 300px;
   height: 300px;
@@ -295,5 +304,54 @@
   position: absolute;
   left: 450px;
   display: none;
+}
+#content .center #left #left-top #big-picture img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#content .center #left #left-bottom {
+  margin: 20px 0;
+  width: 452px;
+  height: 58px;
+  display: flex;
+  position: relative;
+}
+#content .center #left #left-bottom .prev,
+#content .center #left #left-bottom .next {
+  position: absolute;
+  margin: 13px auto;
+  width: 22px;
+  height: 32px;
+  background-image: url(../IMG/__sprite.png);
+  color: #f30213;
+}
+#content .center #left #left-bottom .prev {
+  left: 0;
+  background-position: 0 -54px;
+}
+#content .center #left #left-bottom .next {
+  left: 428px;
+  background-position: -78px 0px;
+}
+#content .center #left #left-bottom .piclist {
+  width: 390px;
+  height: 58px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#content .center #left #left-bottom .piclist .pic {
+  display: flex;
+  height: 58px;
+  font-size: 0;
+}
+#content .center #left #left-bottom .piclist .pic li {
+  height: 54px;
+  width: 54px;
+  margin: 0 9px;
+  border: 2px solid transparent;
+}
+#content .center #left #left-bottom .piclist .pic li.clock:hover {
+  border: 2px solid #f30213;
 }
 /*# sourceMappingURL=./details.css.map */

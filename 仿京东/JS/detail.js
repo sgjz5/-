@@ -89,6 +89,19 @@ window.onload = function () {
                 }
                 maskElement.style.left = x + "px";
                 maskElement.style.top = y + "px";
+
+                // 大图移动
+                // 二者成比例
+                /* 
+                    蒙版元素移动的距离=小图框宽度-蒙版元素的宽度
+                    大图片元素的距离=大图片宽度-大图框元素的宽度
+                */
+                let scale = (smallPicture.clientWidth - maskElement.offsetWidth) / (bigImg.offsetWidth - bigPicture.clientWidth);
+
+                bigImg.style.left = -x / scale + "px";
+                bigImg.style.top = -y / scale + "px";
+
+
             })
 
             smallPicture.addEventListener("mouseleave", () => {
