@@ -151,7 +151,6 @@
 }
 
 .search-bar-content {
-    margin: 0 auto;
 
     div {
         float: left;
@@ -258,10 +257,8 @@
     background-color: #333;
     display: flex;
 
-    #nav-content {
+    .nav-content {
         display: flex;
-        margin: 0 auto;
-        width: 1210px;
     }
 
     ul {
@@ -334,12 +331,64 @@
             margin: auto 6px;
         }
 
+        a:hover:not(:last-child) {
+            color: #f30213;
+        }
+
         .ellipsis {
             width: 120px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
             display: block;
+        }
+
+
+    }
+
+    // 中间
+    .center {
+        margin-top: 10px;
+
+        // 放大镜
+        #left {
+
+            #left-top {
+                display: flex;
+                position: relative;
+
+                // 小图
+                #small-picture {
+                    width: 450px;
+                    height: 450px;
+                    border: 1px solid rgb(238, 238, 238);
+                    position: relative;
+
+                    // 蒙版
+                    #mask {
+                        width: 300px;
+                        height: 300px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(255, 239, 167, 0.5);
+                        
+                    }
+                }
+
+                // 大图
+                #big-picture{
+                    width: 540px;
+                    height: 540px;
+                    border: 1px solid rgb(238, 238, 238);
+                    overflow: hidden;
+                    position: absolute;
+                    left: 450px;
+                    display: none;
+                    
+                }
+            }
+
         }
     }
 }

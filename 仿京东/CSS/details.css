@@ -113,9 +113,6 @@
   width: 158px;
   height: 140px;
 }
-.search-bar-content {
-  margin: 0 auto;
-}
 .search-bar-content div {
   float: left;
 }
@@ -201,10 +198,8 @@
   background-color: #333;
   display: flex;
 }
-#nav #nav-content {
+#nav .nav-content {
   display: flex;
-  margin: 0 auto;
-  width: 1210px;
 }
 #nav ul {
   display: flex;
@@ -261,11 +256,44 @@
   font-size: 12px;
   margin: auto 6px;
 }
+#content #nav-path a:hover:not(:last-child) {
+  color: #f30213;
+}
 #content #nav-path .ellipsis {
   width: 120px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   display: block;
+}
+#content .center {
+  margin-top: 10px;
+}
+#content .center #left #left-top {
+  display: flex;
+  position: relative;
+}
+#content .center #left #left-top #small-picture {
+  width: 450px;
+  height: 450px;
+  border: 1px solid #eeeeee;
+  position: relative;
+}
+#content .center #left #left-top #small-picture #mask {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 239, 167, 0.5);
+}
+#content .center #left #left-top #big-picture {
+  width: 540px;
+  height: 540px;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  position: absolute;
+  left: 450px;
+  display: none;
 }
 /*# sourceMappingURL=./details.css.map */
