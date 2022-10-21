@@ -268,6 +268,8 @@
 }
 #content .center {
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 #content .center #left #left-top {
   display: flex;
@@ -304,6 +306,7 @@
   position: absolute;
   left: 450px;
   display: none;
+  z-index: 100;
 }
 #content .center #left #left-top #big-picture img {
   position: absolute;
@@ -357,5 +360,93 @@
 }
 #content .center #left #left-bottom .piclist .pic .clock {
   border: 2px solid #f30213;
+}
+#content .center #right {
+  width: 738px;
+}
+#content .center #right #title {
+  font: 700 16px Arial, "microsoft yahei";
+  color: #666;
+  padding-top: 10px;
+  line-height: 28px;
+  margin-bottom: 5px;
+}
+#content .center #right #news {
+  background-color: #f3f3f3;
+}
+#content .center #right #news #details {
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+#content .center #right #news #details #price {
+  display: flex;
+}
+#content .center #right #news #details #price span {
+  display: flex;
+}
+#content .center #right #news #details #price span p {
+  color: #e4393c;
+  font-family: "microsoft yahei";
+  font-size: 16px;
+  line-height: 18px;
+}
+#content .center #right #news #details #price span p:nth-child(1) {
+  margin-left: 22px;
+}
+#content .center #right #news #details #price span p:nth-child(2) {
+  font-size: 22px;
+  margin-right: 10px;
+}
+#content .center #right #news #details #price #total {
+  width: 69px;
+  text-align: center;
+  margin: auto 10px auto auto;
+  border-left: #e6e6e6 1px solid;
+}
+#content .center #right #news #details #price #total .font-color {
+  padding-left: 0;
+}
+#content .center #right #news #details #price #total .blue {
+  font-size: 14px;
+  margin-left: 10px;
+}
+#content .center #right #news #details #price #segmentation {
+  height: 2px;
+}
+#content .center #right #news #details #price #activity {
+  display: flex;
+}
+#content .center #right #news #details #price a:hover {
+  color: #f30213;
+}
+#content .center #right #news #details #activity {
+  display: flex;
+  font-size: 12px;
+  height: 60px;
+}
+#content .center #right #news #details #activity .activityTitle {
+  padding: 2px 3px;
+  border: 1px solid #df3033;
+  margin-right: 5px;
+  line-height: 16px;
+  color: #df3033;
+}
+#content .center #right #news #details #activity div {
+  margin-left: 10px;
+  height: 30px;
+}
+#content .center #right #news #details #activity div #forPurchasing span:nth-child(2),
+#content .center #right #news #details #activity div #gift span:nth-child(2) {
+  color: #666666;
+  font-size: 12px;
+}
+#content .center #right #news #details #activity div #forPurchasing a:hover,
+#content .center #right #news #details #activity div #gift a:hover {
+  color: #d21623;
+}
+#content .center #right #news #details #activity div #forPurchasing i,
+#content .center #right #news #details #activity div #gift i {
+  color: #999;
+  font-style: normal;
 }
 /*# sourceMappingURL=./details.css.map */

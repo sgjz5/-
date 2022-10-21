@@ -349,6 +349,8 @@
     // 中间
     .center {
         margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
 
         // 放大镜
         #left {
@@ -396,6 +398,7 @@
                     position: absolute;
                     left: 450px;
                     display: none;
+                    z-index: 100;
 
                     img {
                         position: absolute;
@@ -465,16 +468,118 @@
                     }
                 }
 
-
-
-
             }
 
         }
 
         // 商品详情
-        #right{
-            
+        #right {
+            width: 738px;
+
+            #title {
+                font: 700 16px Arial, "microsoft yahei";
+                color: #666;
+                padding-top: 10px;
+                line-height: 28px;
+                margin-bottom: 5px;
+            }
+
+            #news {
+                background-color: rgb(243, 243, 243);
+
+                #details {
+                    padding-bottom: 5px;
+                    padding-top: 10px;
+
+                    #price {
+                        display: flex;
+
+                        span {
+                            display: flex;
+
+                            p {
+                                color: #e4393c;
+                                font-family: "microsoft yahei";
+                                font-size: 16px;
+                                line-height: 18px;
+
+                                &:nth-child(1) {
+                                    margin-left: 22px;
+                                }
+
+                                &:nth-child(2) {
+                                    font-size: 22px;
+                                    margin-right: 10px;
+                                }
+
+                            }
+                        }
+
+
+                        #total {
+                            width: 69px;
+                            text-align: center;
+                            margin: auto 10px auto auto;
+                            border-left: rgb(230, 230, 230) 1px solid;
+
+                            .font-color {
+                                padding-left: 0;
+                            }
+
+                            .blue {
+                                font-size: 14px;
+                                margin-left: 10px;
+                            }
+                        }
+
+                        #segmentation {
+                            height: 2px;
+                        }
+
+                        #activity {
+                            display: flex;
+                        }
+
+                        a:hover {
+                            color: #f30213;
+                        }
+                    }
+
+                    #activity {
+                        display: flex;
+                        font-size: 12px;
+                        height: 60px;
+                        .activityTitle {
+                            padding: 2px 3px;
+                            border: 1px solid rgb(223, 48, 51);
+                            margin-right: 5px;
+                            line-height: 16px;
+                            color: rgb(223, 48, 51);
+                        }
+
+                        div {
+                            margin-left: 10px;
+                            height: 30px;
+                            #forPurchasing,
+                            #gift{
+                                span:nth-child(2){
+                                    color: rgb(102, 102, 102);
+                                    font-size: 12px;
+                                }
+                                a:hover{
+                                    color: rgb(210,22,35);
+                                }
+                                i{
+                                    color: #999;
+                                    font-style: normal;
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+            }
         }
     }
 }
