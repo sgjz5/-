@@ -36,7 +36,6 @@ window.onload = function () {
         }
     }
 
-
     // 放大镜
     function magnifyingLens() {
         /*
@@ -58,8 +57,7 @@ window.onload = function () {
             const bigImg = document.createElement("img");
             bigImg.src = imgData[imgindex].d;
             bigPicture.appendChild(bigImg);
-
-
+            bigPicture.style.display = "block";
 
             // 创建蒙版
             const maskElement = document.createElement('div');
@@ -103,13 +101,12 @@ window.onload = function () {
 
                 bigImg.style.left = -x / scale + "px";
                 bigImg.style.top = -y / scale + "px";
-
-
             })
 
             smallPicture.addEventListener("mouseleave", () => {
                 maskElement.remove();
                 bigImg.remove();
+                bigPicture.style.display = "none";
             })
 
         })
@@ -154,22 +151,60 @@ window.onload = function () {
             liNode[i].addEventListener('mouseover', () => {
                 liNode[i].firstElementChild.src = imgData[i].s;
                 smallPicture.children[1].src = imgData[i].b;
+                // 去掉默认的边框
                 let clock = document.querySelector("#content .center #left #left-bottom .piclist .pic .clock");
                 clock.classList.remove("clock");
                 // 获取到当前要显示的缩略图
                 liNode[i].classList.add("clock");
             })
-
-
         }
-
-
-
-
-
     }
     thumbnailEnter()
 
+    // 点击缩略图左右箭头效果
+    function thumbaniLeftRightClick() {
+        /* 
+            1.获取左右箭头按钮
+            2.获取可视的div与ul元素和所有的li元素
+            3.计算初始（发生起点、步长、总体运动距离值）
+            4.然后再发生点击事件
+        */
+        // 获取左右箭头
+        const forward = document.querySelector("a#forward");
+        const backward = document.querySelector("a#backward");
+
+        
+        // 获取可视的ul元素和所有的li元素
+        const ul = document.querySelector(".piclist .pic");
+        const liNode = document.querySelectorAll(".piclist .pic li");
+
+        // 初始计算
+        // 起点
+        let start = 0;
+        // 步长
+        let step = (liNode[0].offsetWidth + 20) * 2;
+        // 总体运动距离值=ul宽度-div框的宽度=（图片的总数-div中显示的数量）*（li宽度+20）
+        let endPositon = (liNode.length - 5) * (liNode[0].offsetWidth + 20);
+
+        console.log(backward);
+        forward.addEventListener("click", () => {
+            start += step;
+            if (start > 0) {
+                start = 0;
+            }
+            ul.style.left = start + "px";
+        })
+
+        backward.addEventListener("click", () => {
+            start -= step;
+            if (start < (-endPositon)) {
+                start = -endPositon;
+            }
+            ul.style.left = start + "px";
+        })
+
+    }
+    thumbaniLeftRightClick()
 
 
 
