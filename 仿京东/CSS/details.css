@@ -519,7 +519,7 @@
 #content .center #rightDetails #services #weigh div {
   margin-left: 12px;
 }
-#content .center #rightDetails #choose .items a:not(.drop) {
+#content .center #rightDetails #choose .items a:not(.drop, .detail) {
   margin: 0 7px 4px 0;
   display: flex;
   align-items: center;
@@ -527,7 +527,7 @@
   background-color: #f7f7f7;
   padding: 1px 10px 1px 1px;
 }
-#content .center #rightDetails #choose .items a:not(.drop):hover,
+#content .center #rightDetails #choose .items a:not(.drop, .detail):hover,
 #content .center #rightDetails #choose .items .current {
   border: 1px solid #e3393c;
 }
@@ -603,10 +603,27 @@
   background-color: #fff;
   line-height: 30px;
 }
+#content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div:hover > a.detail {
+  display: block;
+}
 #content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div {
   display: flex;
 }
 #content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div .drop:hover {
   color: #e3393c;
+}
+#content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div .drop:hover .detail {
+  display: block;
+}
+#content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div a.detail {
+  display: none;
+  margin-left: 20px;
+}
+#content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div a.detail i {
+  font-style: normal;
+  color: #646Fb0;
+}
+#content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div .detail:hover i {
+  color: #f30213;
 }
 /*# sourceMappingURL=./details.css.map */

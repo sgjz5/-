@@ -264,21 +264,45 @@ window.onload = function () {
     function jdservice() {
         const content = document.querySelectorAll(".yb-car")
         const ybContent = document.querySelectorAll(".yb-car .yb-car-content")
+        // 层级
         let zIndex = 21;
+        // 标记
         let flag = true;
         const serviceData = goodData.service;
         for (let i = 0; i < content.length; i++) {
-            content[i].addEventListener("mouseover", (event) => {
+            // 下拉框
+            content[i].addEventListener("mouseover", () => {
+                // 使当前的点击的层级比下拉框高
                 ybContent[i].style.zIndex = zIndex + 1;
+                // 确保只添加一次
                 if (flag) {
                     content[i].insertAdjacentHTML("beforeend",
                         `
                     <div class="yb-car-drop">
-                        <div><input type="checkbox" value=${serviceData.name[0].serviceName} id="first"><a href="javascript:;"
-                                class="drop">&nbsp;${serviceData.name[0].serviceName} <span>￥</span><span>${serviceData.name[0].price}</span></div></a>
-                        <div><input type="checkbox" value=${serviceData.name[1].serviceName} id="sec"><a href="javacript:;"
-                                class="drop">&nbsp;${serviceData.name[1].serviceName} <span>￥</span><span>${serviceData.name[1].serviceName}</span></a></div>
-                    </div>`
+                        <div>
+                            <input type="checkbox" value=${serviceData.name[0].serviceName} id="first">
+                                <a href="javascript:;"class="drop">
+                                    &nbsp;${serviceData.name[0].serviceName} 
+                                    <span>￥</span>
+                                    <span>${serviceData.name[0].price}</span>                       
+                                </a>  
+                                <a href="javascript:;" class="detail">
+                                        <i>详情</i>>>
+                                    </a>  
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" value=${serviceData.name[1].serviceName} id="sec">
+                                <a href="javascript:;" class="drop">&nbsp;${serviceData.name[1].serviceName} 
+                                    <span>￥</span>
+                                    <span>${serviceData.name[1].price}</span>                                  
+                                </a>   
+                                <a href="javascript:;" class="detail">
+                                        <i>详情</i>>>
+                                    </a>       
+                        </div>
+                    </div>
+                    `
                     )
                     flag = false;
                 }
@@ -290,6 +314,8 @@ window.onload = function () {
                     flag = true;
                 }
             })
+
+
         }
 
 

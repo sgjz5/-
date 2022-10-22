@@ -683,7 +683,7 @@
             #choose {
 
                 .items {
-                    a:not(.drop) {
+                    a:not(.drop, .detail) {
                         margin: 0 7px 4px 0;
                         display: flex;
                         align-items: center;
@@ -692,7 +692,7 @@
                         padding: 1px 10px 1px 1px;
                     }
 
-                    a:not(.drop):hover,
+                    a:not(.drop, .detail):hover,
                     .current {
                         border: 1px solid rgb(227, 57, 60);
                     }
@@ -734,7 +734,7 @@
                     }
                 }
 
-                .service{
+                .service {
                     margin-top: 4px;
 
                     .items {
@@ -746,16 +746,18 @@
                             border-bottom: 1px solid #fff;
                         }
 
-                        .yb-car:hover .yb-car-content a  i{
+                        .yb-car:hover .yb-car-content a i {
                             transform: rotate(180deg);
                         }
 
                         .yb-car {
                             position: relative;
+
                             .yb-car-content {
                                 position: relative;
                                 z-index: 20;
                                 border: 1px solid transparent;
+
                                 a {
                                     line-height: 30px;
                                     background-color: #fff;
@@ -763,7 +765,8 @@
                                     img {
                                         width: 16px;
                                     }
-                                    i{
+
+                                    i {
                                         font-size: 17px;
                                     }
                                 }
@@ -772,7 +775,7 @@
 
                             .yb-car-drop {
                                 display: none;
-                                top:34px;
+                                top: 34px;
                                 left: 1px;
                                 position: absolute;
                                 border: 1px solid #e1e1e1;
@@ -782,13 +785,38 @@
                                 background-color: #fff;
                                 line-height: 30px;
 
+                                div:hover>a.detail{
+                                    display: block;
+                                }
                                 div {
-                                    
+
                                     display: flex;
+                                    
 
                                     .drop:hover {
                                         color: rgb(227, 57, 60);
+
+                                        & .detail {
+                                            display: block;
+                                        }
                                     }
+
+
+                                    a.detail {
+                                        display: none;
+                                        margin-left: 20px;
+
+                                        i {
+                                            font-style: normal;
+                                            color: #646Fb0;
+                                        }
+
+                                    }
+
+                                    .detail:hover i {
+                                        color: #f30213;
+                                    }
+
                                 }
                             }
                         }
