@@ -112,7 +112,7 @@ window.onload = function () {
         })
 
     }
-    magnifyingLens()
+    magnifyingLens();
 
     // 动态渲染放大镜缩略图数据
     function thumbnailData() {
@@ -135,7 +135,7 @@ window.onload = function () {
         }
 
     }
-    thumbnailData()
+    thumbnailData();
     // 切换缩略图的效果
     function thumbnailEnter() {
         /* 
@@ -159,7 +159,7 @@ window.onload = function () {
             })
         }
     }
-    thumbnailEnter()
+    thumbnailEnter();
 
     // 点击缩略图左右箭头效果
     function thumbaniLeftRightClick() {
@@ -173,7 +173,7 @@ window.onload = function () {
         const forward = document.querySelector("a#forward");
         const backward = document.querySelector("a#backward");
 
-        
+
         // 获取可视的ul元素和所有的li元素
         const ul = document.querySelector(".piclist .pic");
         const liNode = document.querySelectorAll(".piclist .pic li");
@@ -186,7 +186,6 @@ window.onload = function () {
         // 总体运动距离值=ul宽度-div框的宽度=（图片的总数-div中显示的数量）*（li宽度+20）
         let endPositon = (liNode.length - 5) * (liNode[0].offsetWidth + 20);
 
-        console.log(backward);
         forward.addEventListener("click", () => {
             start += step;
             if (start > 0) {
@@ -204,7 +203,98 @@ window.onload = function () {
         })
 
     }
-    thumbaniLeftRightClick()
+    thumbaniLeftRightClick();
+
+    // 商品详情的动态渲染
+    function rightTopData() {
+        /* 
+            查找right元素
+            查找goodData的details数据
+            将对应数据添加到位置上
+
+        */
+        const right = document.querySelector("#content .center #right");
+        const details = goodData.details;
+        console.log(details.tltle);
+        let str = `<!-- 商品标题 -->
+        <p id="title">${details.tltle}</p>
+        <!-- 商品价格 -->
+        <div id="news">
+            <div id="titleImg"><img src=${details.img}></div>
+            <div id="details">
+                <div id="price">
+                    <p class="font-color">京 东 价</p>
+                    <span>
+                        <p>￥</p>
+                        <p>${details.price}</p>
+                    </span>
+                    <a href="javascript:;" class="blue">降价通知</a>
+
+                    <div id="total">
+                        <p class="font-color">累计评价</p>
+                        <a href="javascript:;" class="blue">${details.evaluationNum}</a>
+                    </div>
+                </div>
+
+                <!-- 分割 -->
+                <div id="segmentation"></div>
+                <div id="activity">
+                    <p class="font-color">促&nbsp;&nbsp;销</p>
+                    <div>
+                        <div id="forPurchasing">
+                            <span class="activityTitle">限购</span>
+                            <span>${details.forPurchasingIntroduce}</span>
+                        </div>
+                        <div id="gift">
+                            <span class="activityTitle">满赠</span>
+                            <span>${details.giftIntroduce}</span>
+                            &nbsp;&nbsp;
+                            <a href="javascript:;">详情</a><i>>></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+        right.innerHTML = str;
+    }
+    rightTopData();
+
+    // 京东服务
+    function jdservice() {
+        const content = document.querySelectorAll(".yb-car")
+        const ybContent = document.querySelectorAll(".yb-car .yb-car-content")
+        let zIndex = 21;
+        let flag = true;
+        const serviceData = goodData.service;
+        for (let i = 0; i < content.length; i++) {
+            content[i].addEventListener("mouseover", (event) => {
+                ybContent[i].style.zIndex = zIndex + 1;
+                if (flag) {
+                    content[i].insertAdjacentHTML("beforeend",
+                        `
+                    <div class="yb-car-drop">
+                        <div><input type="checkbox" value=${serviceData.name[0].serviceName} id="first"><a href="javascript:;"
+                                class="drop">&nbsp;${serviceData.name[0].serviceName} <span>￥</span><span>${serviceData.name[0].price}</span></div></a>
+                        <div><input type="checkbox" value=${serviceData.name[1].serviceName} id="sec"><a href="javacript:;"
+                                class="drop">&nbsp;${serviceData.name[1].serviceName} <span>￥</span><span>${serviceData.name[1].serviceName}</span></a></div>
+                    </div>`
+                    )
+                    flag = false;
+                }
+            })
+            content[i].addEventListener("mouseout", () => {
+                ybContent[i].style.zIndex = zIndex - 1;
+                const drop = content[i].querySelectorAll(".yb-car-drop")
+                if (!flag && drop.length < 1) {
+                    flag = true;
+                }
+            })
+        }
+
+
+    }
+    jdservice()
 
 
 

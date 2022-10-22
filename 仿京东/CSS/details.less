@@ -265,6 +265,10 @@
         display: flex;
 
         li {
+            &:not(:first-child) {
+                width: 75px;
+            }
+
             a {
                 line-height: 40px;
                 margin-left: 30px;
@@ -473,8 +477,9 @@
         }
 
         // 商品详情
-        #right {
+        #rightDetails {
             width: 738px;
+            margin-left: 10px;
 
             #title {
                 font: 700 16px Arial, "microsoft yahei";
@@ -515,7 +520,6 @@
                             }
                         }
 
-
                         #total {
                             width: 69px;
                             text-align: center;
@@ -549,6 +553,7 @@
                         display: flex;
                         font-size: 12px;
                         height: 60px;
+
                         .activityTitle {
                             padding: 2px 3px;
                             border: 1px solid rgb(223, 48, 51);
@@ -560,16 +565,19 @@
                         div {
                             margin-left: 10px;
                             height: 30px;
+
                             #forPurchasing,
-                            #gift{
-                                span:nth-child(2){
+                            #gift {
+                                span:nth-child(2) {
                                     color: rgb(102, 102, 102);
                                     font-size: 12px;
                                 }
-                                a:hover{
-                                    color: rgb(210,22,35);
+
+                                a:hover {
+                                    color: rgb(210, 22, 35);
                                 }
-                                i{
+
+                                i {
                                     color: #999;
                                     font-style: normal;
                                 }
@@ -579,6 +587,215 @@
                     }
 
                 }
+            }
+
+            #services {
+                margin-top: 10px;
+                display: flex;
+                flex-flow: column;
+
+
+
+                .font {
+                    padding: 0 10px;
+                }
+
+                #recycle {
+                    display: flex;
+
+                    a {
+                        margin-left: 22px;
+                    }
+                }
+
+                #distribution {
+                    display: flex;
+                    flex-flow: column;
+
+                    #address {
+                        display: flex;
+
+                        p:nth-child(2) {
+                            margin-left: 22px;
+                            padding-left: 0;
+
+                        }
+
+                        div {
+                            padding: 0 10px;
+
+                            span:first-child,
+                            a {
+                                color: #646Fb0;
+                            }
+
+                            a:hover {
+                                color: rgb(228, 57, 60);
+                            }
+                        }
+
+                    }
+
+                    #time {
+                        display: flex;
+                        flex-flow: column;
+
+                        #way {
+                            display: flex;
+                            margin-left: 79px;
+                            height: 32px;
+                            align-items: center;
+
+                            img {
+                                width: 86px;
+                                margin-right: 10px;
+                            }
+
+                            a {
+                                color: #646Fb0;
+                            }
+
+                            a:hover {
+                                color: rgb(228, 57, 60);
+                            }
+
+                        }
+
+                        #delivery {
+                            margin-left: 70px;
+                            height: 32px;
+                        }
+                    }
+
+                }
+
+                #weigh {
+                    display: flex;
+                    height: 32px;
+
+
+                    div {
+                        margin-left: 12px;
+                    }
+                }
+            }
+
+            #choose {
+
+                .items {
+                    a:not(.drop) {
+                        margin: 0 7px 4px 0;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid rgb(204, 204, 204);
+                        background-color: rgb(247, 247, 247);
+                        padding: 1px 10px 1px 1px;
+                    }
+
+                    a:not(.drop):hover,
+                    .current {
+                        border: 1px solid rgb(227, 57, 60);
+                    }
+
+                }
+
+                #model,
+                #package,
+                .service {
+                    display: flex;
+                    margin-top: 15px;
+
+                    .font-color {
+                        white-space: nowrap;
+                        line-height: 40px;
+                        margin-right: 20px;
+                    }
+
+                    .options {
+                        display: flex;
+                        flex-flow: row wrap;
+                    }
+
+                }
+
+                #package {
+                    margin-top: 4px;
+
+                    .options {
+                        align-items: center;
+
+                        .items {
+                            a {
+                                background-color: #fff;
+                                padding: 0 13px;
+                                line-height: 34px;
+                            }
+                        }
+                    }
+                }
+
+                .service{
+                    margin-top: 4px;
+
+                    .items {
+                        .yb-car:hover .yb-car-drop {
+                            display: block;
+                        }
+
+                        .yb-car:hover .yb-car-content a {
+                            border-bottom: 1px solid #fff;
+                        }
+
+                        .yb-car:hover .yb-car-content a  i{
+                            transform: rotate(180deg);
+                        }
+
+                        .yb-car {
+                            position: relative;
+                            .yb-car-content {
+                                position: relative;
+                                z-index: 20;
+                                border: 1px solid transparent;
+                                a {
+                                    line-height: 30px;
+                                    background-color: #fff;
+
+                                    img {
+                                        width: 16px;
+                                    }
+                                    i{
+                                        font-size: 17px;
+                                    }
+                                }
+
+                            }
+
+                            .yb-car-drop {
+                                display: none;
+                                top:34px;
+                                left: 1px;
+                                position: absolute;
+                                border: 1px solid #e1e1e1;
+                                padding-left: 4px;
+                                width: 250px;
+                                z-index: 21;
+                                background-color: #fff;
+                                line-height: 30px;
+
+                                div {
+                                    
+                                    display: flex;
+
+                                    .drop:hover {
+                                        color: rgb(227, 57, 60);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
             }
         }
     }
