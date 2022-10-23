@@ -626,4 +626,9 @@
 #content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div .detail:hover i {
   color: #f30213;
 }
+#content .center #rightDetails #choose .options .items a.click,
+#content .center #rightDetails #package .options .items a.click,
+#content .center #rightDetails .service .options .items a.click {
+  border: 1px solid #e3393c;
+}
 /*# sourceMappingURL=./details.css.map */

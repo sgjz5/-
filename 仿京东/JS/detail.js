@@ -322,6 +322,41 @@ window.onload = function () {
     }
     jdservice()
 
+    // 点击效果
+    function click() {
+        const clickArr = document.querySelectorAll("div .items");
+        for (let i = 0; i < clickArr.length; i++) {
+            // 选中型号选中
+            if (clickArr[i].parentElement.parentElement.id == "model") {
+                clickArr[i].addEventListener("click", (event) => {
+                    const modelClick = document.querySelector("#model div .items a.click");
+                    modelClick.classList.remove("click");
+                    if (event.target.parentElement.className == "items") {
+                        event.target.classList.add("click")
+                    } else {
+                        event.target.parentElement.classList.add("click")
+                    }
+                })
+            } else {
+                clickArr[i].addEventListener("click", (event) => {
+                    console.log(event.target.parentElement.classList);
+                    if (event.target.parentElement.className == "items" && event.target.classList == '') {
+                        event.target.classList.add("click")
+                    } else if (event.target.parentElement.classList == "") {
+                        event.target.parentElement.classList.add("click")
+                    } else if (event.target.parentElement.classList == "click") {
+                        event.target.parentElement.classList.remove("click")
+                    } else {
+                        event.target.classList.remove("click")
+                    }
+                })
+            }
+
+
+        }
+    }
+    click()
+
 
 
 }
