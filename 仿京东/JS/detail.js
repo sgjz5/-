@@ -215,7 +215,6 @@ window.onload = function () {
         */
         const right = document.querySelector("#content .center #right");
         const details = goodData.details;
-        console.log(details.tltle);
         let str = `<!-- 商品标题 -->
         <p id="title">${details.tltle}</p>
         <!-- 商品价格 -->

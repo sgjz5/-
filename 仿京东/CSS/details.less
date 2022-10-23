@@ -481,7 +481,6 @@
             width: 738px;
             margin-left: 10px;
 
-
             #title {
                 font: 700 16px Arial, "microsoft yahei";
                 color: #666;
@@ -681,7 +680,6 @@
                 }
             }
 
-            
             #choose {
 
                 .items {
@@ -701,6 +699,7 @@
 
                 }
 
+                // 通用
                 #model,
                 #package,
                 .service {
@@ -716,8 +715,18 @@
                     .options {
                         display: flex;
                         flex-flow: row wrap;
-                    }
 
+                        // 点击效果
+                        .items {
+                            a.click {
+                                border: 1px solid rgb(227, 57, 60);
+                            }
+
+                            a {
+                                background-color: #fff;
+                            }
+                        }
+                    }
                 }
 
                 #package {
@@ -728,7 +737,6 @@
 
                         .items {
                             a {
-                                background-color: #fff;
                                 padding: 0 13px;
                                 line-height: 34px;
                             }
@@ -762,7 +770,6 @@
 
                                 a {
                                     line-height: 30px;
-                                    background-color: #fff;
 
                                     img {
                                         width: 16px;
@@ -787,13 +794,14 @@
                                 background-color: #fff;
                                 line-height: 30px;
 
-                                div:hover>a.detail{
+                                div:hover>a.detail {
                                     display: block;
                                 }
+
                                 div {
 
                                     display: flex;
-                                    
+
 
                                     .drop:hover {
                                         color: rgb(227, 57, 60);
@@ -828,12 +836,7 @@
 
             }
 
-            #choose .options .items a.click,
-            #package .options .items a.click,
-            .service .options .items a.click
-            {
-                border: 1px solid rgb(227, 57, 60);
-            }
+
         }
     }
 }

@@ -550,6 +550,16 @@
   display: flex;
   flex-flow: row wrap;
 }
+#content .center #rightDetails #choose #model .options .items a.click,
+#content .center #rightDetails #choose #package .options .items a.click,
+#content .center #rightDetails #choose .service .options .items a.click {
+  border: 1px solid #e3393c;
+}
+#content .center #rightDetails #choose #model .options .items a,
+#content .center #rightDetails #choose #package .options .items a,
+#content .center #rightDetails #choose .service .options .items a {
+  background-color: #fff;
+}
 #content .center #rightDetails #choose #package {
   margin-top: 4px;
 }
@@ -557,7 +567,6 @@
   align-items: center;
 }
 #content .center #rightDetails #choose #package .options .items a {
-  background-color: #fff;
   padding: 0 13px;
   line-height: 34px;
 }
@@ -583,7 +592,6 @@
 }
 #content .center #rightDetails #choose .service .items .yb-car .yb-car-content a {
   line-height: 30px;
-  background-color: #fff;
 }
 #content .center #rightDetails #choose .service .items .yb-car .yb-car-content a img {
   width: 16px;
@@ -625,10 +633,5 @@
 }
 #content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div .detail:hover i {
   color: #f30213;
-}
-#content .center #rightDetails #choose .options .items a.click,
-#content .center #rightDetails #package .options .items a.click,
-#content .center #rightDetails .service .options .items a.click {
-  border: 1px solid #e3393c;
 }
 /*# sourceMappingURL=./details.css.map */
