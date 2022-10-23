@@ -634,4 +634,151 @@
 #content .center #rightDetails #choose .service .items .yb-car .yb-car-drop div .detail:hover i {
   color: #f30213;
 }
+#content .center #rightDetails hr {
+  margin: 10px 0;
+}
+#content .center #rightDetails #addCar {
+  display: flex;
+}
+#content .center #rightDetails #addCar #count {
+  position: relative;
+  width: 58px;
+}
+#content .center #rightDetails #addCar #count input {
+  width: 47px;
+  height: 45px;
+  outline: none;
+  border: 1px solid #999;
+  border-right: none;
+  text-align: center;
+}
+#content .center #rightDetails #addCar #count a {
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px;
+  position: absolute;
+  width: 15px;
+  height: 22px;
+  background-color: #f1f1f1;
+  border: #999 1px solid;
+}
+#content .center #rightDetails #addCar #count a:nth-child(3) {
+  top: 23px;
+}
+#content .center #rightDetails #addCar button {
+  margin-left: 20px;
+  background-color: #df3033;
+  border: none;
+  width: 90px;
+  height: 46px;
+  padding: 0 auto;
+  color: #fff;
+}
+#content .introduce {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#content .introduce #leftNav {
+  width: 210px;
+}
+#content .introduce #leftNav #top,
+#content .introduce #leftNav #other {
+  width: 210px;
+  border: 1px solid #eeeeee;
+}
+#content .introduce #leftNav #top #store,
+#content .introduce #leftNav #other #store,
+#content .introduce #leftNav #top #title,
+#content .introduce #leftNav #other #title {
+  width: 200px;
+  height: 40px;
+  background-color: #f7f7f7;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+#content .introduce #leftNav #top #store a,
+#content .introduce #leftNav #other #store a,
+#content .introduce #leftNav #top #title a,
+#content .introduce #leftNav #other #title a {
+  color: #666;
+}
+#content .introduce #leftNav #top #enter,
+#content .introduce #leftNav #other #enter {
+  width: 210px;
+  height: 57px;
+  text-align: center;
+  line-height: 57px;
+}
+#content .introduce #leftNav #top #enter button,
+#content .introduce #leftNav #other #enter button {
+  width: 90px;
+  height: 36px;
+  border: 1px solid #eeeeee;
+}
+#content .introduce #leftNav #other {
+  margin-top: 20px;
+}
+#content .introduce #leftNav #other #shop {
+  text-align: center;
+  padding-top: 10px;
+}
+#content .introduce #leftNav #other #shop a {
+  height: 40px;
+  display: block;
+  width: 180px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#content .introduce #leftNav #other #shop #money {
+  margin-left: 10px;
+  text-align: left;
+  color: #e4393c;
+  font-size: 14px;
+  font-family: Verdana;
+}
+#content .introduce #rightInt {
+  width: 988px;
+}
+#content .introduce #rightInt #topNav {
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #df3033;
+}
+#content .introduce #rightInt #topNav ul {
+  display: flex;
+  align-items: center;
+}
+#content .introduce #rightInt #topNav ul li {
+  height: 38px;
+  line-height: 38px;
+  padding: 0 25px;
+  font-size: 14px;
+}
+#content .introduce #rightInt #topNav ul li.now {
+  height: 38px;
+  background-color: #e4393c;
+}
+#content .introduce #rightInt #topNav ul li.now a {
+  color: #fff;
+  cursor: default;
+}
+#content .introduce #rightInt #topNav ul li:hover:not(.now) a {
+  color: #f30213;
+}
+#content .introduce #rightInt #topNav button {
+  height: 28px;
+  width: 92px;
+  text-align: center;
+  border: none;
+  margin: 5px 10px 0 0;
+  background-color: #df3033;
+}
+#content .introduce #rightInt #topNav button a {
+  color: #fff;
+}
 /*# sourceMappingURL=./details.css.map */

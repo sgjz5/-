@@ -354,8 +354,25 @@ window.onload = function () {
 
         }
     }
-    click()
+    click();
 
+    // 添加数量
+    function addCount() {
+        const count = document.querySelectorAll("#content .center #rightDetails #addCar #count a");
+        const num = document.querySelector("#content .center #rightDetails #addCar #count input");
+        
+        count[0].addEventListener("click", () => {        
+            num.value = (+num.value)+1;
+        })
+        count[1].addEventListener("click", () => {
+            if (num.value <= '1') {
+                num.value = '1';
+            } else {            
+                num.value = (+num.value)-1;
+            }
+        })
+    }
+    addCount();
 
 
 }
