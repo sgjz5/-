@@ -1001,13 +1001,127 @@
                     border: none;
                     margin: 5px 10px 0 0;
                     background-color: #df3033;
-                    a{
+
+                    a {
                         color: #fff;
                     }
-                    
+
+
+                }
+            }
+
+            #bottomContent {
+                .none{
+                    display: none;
+                }
+                .shopDetail {
+                    border-bottom: 1px solid #f7f7f7;
+                    padding-bottom: 20px;
+
+                    ul {
+                        color: #666;
+                        padding-top: 20px;
+                        padding-left: 42px;
+
+                        &:first-child {
+                            li {
+                                a {
+                                    color: #646Fb0;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            padding-left: 0;
+                            display: flex;
+                            flex-flow: wrap;
+
+                            li {
+                                width: 200px;
+                                margin-left: 42px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+
+                    p {
+                        text-align: right;
+                        padding-right: 20px;
+
+                        a {
+                            color: #646Fb0;
+                        }
+
+                    }
+
+                }
+
+                .specifications {
+                    #Ptable {
+                        color: #666;
+                        border-bottom: 1px solid #f1f1f1;
+
+                        .Ptable-item {
+                            display: flex;
+                            padding: 12px 0;
+
+                            h3 {
+                                width: 110px;
+                                text-align: right;
+                            }
+
+                            dl {
+                                dl {
+                                    margin-left: 110px;
+                                    display: flex;
+
+                                    dd {
+                                        margin-left: 60px;
+                                    }
+                                }
+
+                            }
+                            &:last-child{
+                                h3{
+                                    width: 130px;
+                                }
+                                p{
+                                    margin-left: 30px;
+                                }
+                                
+                            }
+                        }
+                    }
+
+                }
+
+                .ssd-module-wrap{
+                    margin: 40px auto;
+                    div{    
+                        display: flex;
+                        justify-content: space-around;
+                    }
+
+                }
+
+                .after-sales,
+                .product-evaluation,
+                .all-evaluation,
+                .qa{
+                    margin: 40px;
+                    .title{
+                        width: 968px;
+                        padding: 10px;
+                        border: 1px solid #eeeeee;
+                        background-color: #f7f7f7;
+                        color: #666;
+                        font-size: 16px;
+                    }
                     
                 }
             }
+
+            
         }
 
     }

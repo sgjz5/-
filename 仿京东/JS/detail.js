@@ -360,19 +360,63 @@ window.onload = function () {
     function addCount() {
         const count = document.querySelectorAll("#content .center #rightDetails #addCar #count a");
         const num = document.querySelector("#content .center #rightDetails #addCar #count input");
-        
-        count[0].addEventListener("click", () => {        
-            num.value = (+num.value)+1;
+
+        count[0].addEventListener("click", () => {
+            num.value = (+num.value) + 1;
         })
         count[1].addEventListener("click", () => {
             if (num.value <= '1') {
                 num.value = '1';
-            } else {            
-                num.value = (+num.value)-1;
+            } else {
+                num.value = (+num.value) - 1;
             }
         })
     }
     addCount();
+
+    // 导航点击状态
+    function navAction() {
+        const liNode = document.querySelectorAll("#content .introduce #rightInt #topNav ul li")
+        const contentNode = document.querySelectorAll("#content .introduce #rightInt #bottomContent>div")
+        const more = contentNode[0].querySelector(".shopDetail p a");
+        for (let i = 0; i < liNode.length; i++) {
+            liNode[i].addEventListener("click", () => {
+                const before = document.querySelector("#content .introduce #rightInt #topNav ul li.now")
+                before.classList.remove("now");
+                liNode[i].classList.add("now")
+
+                // 点击商品介绍和包装
+                if (i == 0) {
+                    contentNode[0].firstElementChild.classList.remove("none");
+                    contentNode[0].lastElementChild.classList.add("none");
+
+                    contentNode[0].classList.remove("none");
+                    contentNode[1].classList.remove("none");
+                } else if (i == 1) {
+                    contentNode[0].firstElementChild.classList.add("none");
+                    contentNode[0].lastElementChild.classList.remove("none");
+
+                    contentNode[0].classList.remove("none");
+                    contentNode[1].classList.remove("none");
+                } else {
+                    for (let y = 0; y < i; y++) {
+                        contentNode[y].classList.add("none");
+                        contentNode[y+1].classList.remove("none");
+                    }                
+                }
+            })
+            // 点击更多参数
+            more.addEventListener("click", () => {
+                const before = document.querySelector("#content .introduce #rightInt #topNav ul li.now")
+                contentNode[0].firstElementChild.classList.add("none");
+                contentNode[0].lastElementChild.classList.remove("none");
+                before.classList.remove("now");
+                liNode[1].classList.add("now")
+            })
+
+        }
+    }
+    navAction();
 
 
 }
